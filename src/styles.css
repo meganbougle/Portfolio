@@ -1,0 +1,52 @@
+html,body{
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+.aura-container {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: calc(50% - 90px); /* Mover hacia arriba 50px */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Centrar completamente */
+  }
+  
+  .aura {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, #0066CC 0%, #CA054D 50%, #CA054D 100%);
+    animation: pulse 5s infinite;
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.5);
+    }
+    50% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .folder {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 4px;
+    }
+}
+  
+  
